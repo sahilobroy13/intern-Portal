@@ -15,4 +15,6 @@ router.get("/dashboard", (req, res) => {
     res.render("dashboard", { user: userData.user })
 });
 
+router.get("/leaderboard", (req, res) => res.render("leaderboard", { users: userData.leaderboard }));
+
 module.exports = router;
