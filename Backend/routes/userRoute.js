@@ -10,4 +10,9 @@ router.get("/signup",(req,res)=>{
 })
 router.get("/login", (req, res) => res.render("login"));
 
+router.get("/dashboard", (req, res) => {
+    const user = req.body
+    res.render("dashboard", { user: userData.user })
+});
+
 module.exports = router;

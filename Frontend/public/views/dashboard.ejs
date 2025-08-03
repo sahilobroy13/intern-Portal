@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dashboard</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Georgia&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/dashboard.css">
+  
+</head>
+<body>
+  <div class="full-container">
+    <header>
+      <h1>Hello, <%= user.name %> 👋</h1>
+    </header>
+    <section class="info-grid">
+      <div class="card">
+        <h3>Referral Code</h3>
+        <p><%= user.referralCode %></p>
+      </div>
+      <div class="card">
+        <h3>Total Donations</h3>
+        <p>₹<%= user.donationsRaised %></p>
+      </div>
+      <div class="card">
+        <h3>Rewards</h3>
+        <ul>
+          <li>🎖️ Bronze Contributor</li>
+          <li>🏅 Silver Supporter</li>
+          <li>🥇 Gold Achiever</li>
+        </ul>
+      </div>
+    </section>
+    <div style="text-align: center;">
+      <a href="/leaderboard" class="btn">View Leaderboard</a>
+      <a href="/login" class="btn">LogOut</a>
+    </div>
+  </div>
+  <script src="/js/theme.js"></script>
+</body>
+</html>
