@@ -60,11 +60,13 @@ internPortal/
    ```bash
    git clone https://github.com/sahilobroy13/intern-portal.git
    cd intern-portal
-   
+
 2. **Install dependencies**
+    ```bash
     npm install
     
 3. **Run the server**
+    ```bash
     npm start
     Open in browser: http://localhost:3000
 
