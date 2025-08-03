@@ -15,14 +15,14 @@ router.get('/dashboard', (req, res) => {
     const username = req.query.user;
 
     if (!username) {
-        return res.redirect('/login'); // if blank, go back to login
+        return res.redirect('/login');
     }
 
-    // Construct dynamic user object
+    
     const user = {
         name: username,
         referralCode: username.toLowerCase() + "2025",
-        donationsRaised: Math.floor(Math.random() * 10000) + 1000 // random donations
+        donationsRaised: Math.floor(Math.random() * 10000) + 1000 
     };
 
     res.render('dashboard', { user });

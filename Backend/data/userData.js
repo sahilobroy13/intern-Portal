@@ -1,4 +1,4 @@
-// userData.js
+
 
 const leaderboard = [
     { name: "Sahil", amount: 12500 },

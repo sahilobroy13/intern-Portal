@@ -1,65 +1,97 @@
-body {
-      margin: 0;
-      background: #f3f1e7;
-      font-family: 'Georgia', serif;
-      color: #333;
-    }
-
-    .login-page {
+ body {
+      font-family: 'Poppins', sans-serif;
+      background: radial-gradient(circle at top left, #f0f4f8, #dfe9f3);
+      height: 100vh;
       display: flex;
-      flex-direction: column;
       align-items: center;
       justify-content: center;
-      min-height: 100vh;
-      background: radial-gradient(circle at top, #ffffff 0%, #f1e8d9 100%);
+    }
+
+    .full-container.login-page {
+      background: white;
+      padding: 40px 30px;
+      border-radius: 16px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      width: 90%;
+      max-width: 400px;
+      text-align: center;
+      position: relative;
     }
 
     h1 {
-      font-size: 2.5rem;
-      margin-bottom: 1rem;
-      color: #4a3f35;
+      margin-bottom: 25px;
+      font-size: 26px;
+      color: #2c3e50;
     }
 
     form {
-      background-color: #fff;
-      padding: 2rem 2.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+
+    input[type="text"],
+    input[type="password"] {
+      padding: 12px 15px;
       border: 1px solid #ccc;
       border-radius: 10px;
-      box-shadow: 4px 4px 12px rgba(0,0,0,0.1);
-      max-width: 400px;
-      width: 100%;
+      font-size: 15px;
+      width: 90%;
     }
 
-    input[type="text"] {
-      width: 100%;
-      padding: 10px 14px;
-      margin-bottom: 1rem;
-      border: 1px solid #aaa;
-      border-radius: 6px;
-      font-size: 1rem;
+    .form-row {
+      position: relative;
     }
 
-    input[type="password"] {
-      width: 100%;
-      padding: 10px 14px;
-      margin-bottom: 1rem;
-      border: 1px solid #aaa;
-      border-radius: 6px;
-      font-size: 1rem;
-    }
-
-    button {
-      width: 100%;
-      padding: 10px;
-      background-color: #4a3f35;
-      color: #fff;
-      border: none;
-      border-radius: 6px;
-      font-size: 1rem;
+    .show-password {
+      position: absolute;
+      right: 15px;
+      top: 50%;
+      transform: translateY(-50%);
       cursor: pointer;
-      transition: background 0.3s;
+      font-size: 14px;
+      color: #555;
     }
 
-    button:hover {
-      background-color: #322b24;
+    .options {
+      display: flex;
+      justify-content: space-between;
+      font-size: 14px;
+      color: #555;
+    }
+
+    .options label {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    form button {
+      padding: 12px;
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      color: white;
+      font-size: 16px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    form button:hover {
+      background: linear-gradient(135deg, #5a6ee0, #6e40b6);
+    }
+
+    .footer-note {
+      margin-top: 20px;
+      font-size: 13px;
+      color: #999;
+    }
+
+    .forgot {
+      text-decoration: none;
+      color: #007bff;
+    }
+
+    .forgot:hover {
+      text-decoration: underline;
     }

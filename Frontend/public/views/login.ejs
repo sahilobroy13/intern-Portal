@@ -4,18 +4,43 @@
   <title>Login</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Georgia&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/css/style.css">
-  </style>
+  
 </head>
 <body>
   <div class="full-container login-page">
     <h1>Welcome to the Intern Portal</h1>
     <form action="/dashboard" method="get">
-      <input type="text" placeholder="Enter your name" name="user" required>
-      <input type="password" placeholder="Enter your password" required>
+      <div class="form-row">
+        <input type="text" placeholder="Enter your name" name="user" required>
+      </div>
+
+      <div class="form-row">
+        <input type="password" id="password" placeholder="Enter your password" required>
+        <span class="show-password" onclick="togglePassword()">Show</span>
+      </div>
+
+      <div class="options">
+        <label><input type="checkbox"> Remember me</label>
+        <a href="#" class="forgot">Forgot password?</a>
+      </div>
+
       <button type="submit">Login</button>
     </form>
+    <div class="footer-note">By continuing, you agree to our terms.</div>
   </div>
+
+  <script>
+    function togglePassword() {
+      const input = document.getElementById("password");
+      const toggle = document.querySelector(".show-password");
+      if (input.type === "password") {
+        input.type = "text";
+        toggle.innerText = "Hide";
+      } else {
+        input.type = "password";
+        toggle.innerText = "Show";
+      }
+    }
+  </script>
 </body>
-
-
 </html>
