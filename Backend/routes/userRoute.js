@@ -1,6 +1,7 @@
 const express = require("express");
 const router = express.Router();
-const userData = require("../data/userData");
+const { users } = require('../data/userData');
+const { leaderboard } = require('../data/userData');
 
 router.get("/", (req, res) =>{
     res.redirect("/signup");
@@ -10,11 +11,24 @@ router.get("/signup",(req,res)=>{
 })
 router.get("/login", (req, res) => res.render("login"));
 
-router.get("/dashboard", (req, res) => {
-    const user = req.body
-    res.render("dashboard", { user: userData.user })
+router.get('/dashboard', (req, res) => {
+    const username = req.query.user;
+
+    if (!username) {
+        return res.redirect('/login'); // if blank, go back to login
+    }
+
+    // Construct dynamic user object
+    const user = {
+        name: username,
+        referralCode: username.toLowerCase() + "2025",
+        donationsRaised: Math.floor(Math.random() * 10000) + 1000 // random donations
+    };
+
+    res.render('dashboard', { user });
 });
 
-router.get("/leaderboard", (req, res) => res.render("leaderboard", { users: userData.leaderboard }));
+
+router.get("/leaderboard", (req, res) => res.render("leaderboard", { users: leaderboard }));
 
 module.exports = router;

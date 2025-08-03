@@ -9,11 +9,13 @@
 <body>
   <div class="full-container login-page">
     <h1>Welcome to the Intern Portal</h1>
-    <form action="/dashboard">
-      <input type="text" placeholder="Enter your name" required>
+    <form action="/dashboard" method="get">
+      <input type="text" placeholder="Enter your name" name="user" required>
       <input type="password" placeholder="Enter your password" required>
       <button type="submit">Login</button>
     </form>
   </div>
 </body>
+
+
 </html>

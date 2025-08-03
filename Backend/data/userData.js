@@ -1,12 +1,6 @@
-// data.js
+// userData.js
 
-exports.user = {
-    name: "Sahil",
-    referralCode: "sahil2025",
-    donationsRaised: 12500
-};
-
-exports.leaderboard = [
+const leaderboard = [
     { name: "Sahil", amount: 12500 },
     { name: "Aman", amount: 10200 },
     { name: "Priya", amount: 9500 },
@@ -23,3 +17,13 @@ exports.leaderboard = [
     { name: "Tarun", amount: 5900 },
     { name: "Jyoti", amount: 5700 }
 ];
+
+
+const users = leaderboard.map(user => ({
+    name: user.name,
+    donationsRaised: user.amount,
+    referralCode: `${user.name.toLowerCase()}2025`
+}));
+
+exports.users = users;
+exports.leaderboard = leaderboard;
