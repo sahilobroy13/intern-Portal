@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Leaderboard</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Georgia&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/leaderboard.css">
+  
+</head>
+<body>
+  <div class="full-container">
+    <h2>Top Interns</h2>
+    <div class="leaderboard">
+      <% users.forEach((user, index) => { %>
+        <div class="card">
+          <strong><%= index + 1 %>.</strong> <%= user.name %> – ₹<%= user.amount %>
+        </div>
+      <% }) %>
+    </div>
+    <a href="/dashboard" class="btn">Back to Dashboard</a>
+  </div>
+</body>
+</html>
